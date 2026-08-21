@@ -9,7 +9,7 @@
 #############################
 
 # GTEx vcf (downloaded directly from DB-GAP)
-input_vcf_file="/lab-share/CHIP-Strober-e2/Public/GTEx/genotype_dbgap_download/phg001796.v1.GTEx_v9_WGS_phased.genotype-calls-vcf.c1/GTEx_Analysis_2021-02-11_v9_WholeGenomeSeq_944Indiv_Analysis_Freeze.SHAPEIT2_phased.vcf.gz"
+input_vcf_file="/lab-share/CHIP-Strober-e2/Public/GTEx/genotype_dbgap_download/GTEx_Analysis_2021-02-11_v9_WholeGenomeSeq_953Indiv.SHAPEIT2_phased.vcf.gz"
 
 # eQTL summary statistics
 gtex_v10_eqtl_sumstats_dir="/lab-share/CHIP-Strober-e2/Public/GTEx/eqtl_sumstats/"
@@ -48,5 +48,6 @@ for chrom_num in {1..22}; do
 	sbatch extract_chrom_specific_plink2_file.sh ${variants_to_extract_dir}"gtex_v10_eqtl_variants_chr"${chrom_num}".tsv" $input_vcf_file $chrom_num $processed_genotype_dir $tmp_genotype_dir ${variants_to_extract_dir}"gtex_v10_eqtl_variant_positions_chr"${chrom_num}".tsv"
 done
 fi
+
 
 
