@@ -10,7 +10,6 @@ chrom_num="${3}"
 processed_genotype_dir="${4}"
 TMPDIR="${5}"
 TARGET_POS_FILE="${6}"
-expression_dir="${7}"
 
 OUT="${processed_genotype_dir}/gtex_v9_eqtl_chr${chrom_num}"
 
@@ -83,10 +82,3 @@ plink2 \
 
 
 
-
-
-# NO longer used
-if false; then
-  expr_samples_file="${TMPDIR}/chr${chrom_num}.expression_samples.txt"
-python extract_expression_samples.py "${TMPDIR}/chr${chrom_num}.split.snps.with_ids" $expr_samples_file $expression_dir
-fi

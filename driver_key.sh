@@ -14,8 +14,6 @@ input_vcf_file="/lab-share/CHIP-Strober-e2/Public/GTEx/genotype_dbgap_download/p
 # eQTL summary statistics
 gtex_v10_eqtl_sumstats_dir="/lab-share/CHIP-Strober-e2/Public/GTEx/eqtl_sumstats/"
 
-# GTEx v10 expression (used to filter genotype samples to only those used for eqtls)
-gtex_v10_expression_dir="/lab-share/CHIP-Strober-e2/Public/GTEx/expression/per_tissue_expression/"
 
 #############################
 # Output directories
@@ -39,7 +37,6 @@ conda activate borzoi
 python extract_variants_that_were_used_in_gtex_v10_eqtl_analysis.py $gtex_v10_eqtl_sumstats_dir ${variants_to_extract_dir}
 fi
 
-
 if false; then
 source ~/.bashrc
 conda activate plink_env
@@ -48,7 +45,8 @@ fi
 
 if false; then
 for chrom_num in {1..22}; do
-	sh extract_chrom_specific_plink2_file.sh ${variants_to_extract_dir}"gtex_v10_eqtl_variants_chr"${chrom_num}".tsv" $input_vcf_file $chrom_num $processed_genotype_dir $tmp_genotype_dir ${variants_to_extract_dir}"gtex_v10_eqtl_variant_positions_chr"${chrom_num}".tsv" $gtex_v10_expression_dir
+	sbatch extract_chrom_specific_plink2_file.sh ${variants_to_extract_dir}"gtex_v10_eqtl_variants_chr"${chrom_num}".tsv" $input_vcf_file $chrom_num $processed_genotype_dir $tmp_genotype_dir ${variants_to_extract_dir}"gtex_v10_eqtl_variant_positions_chr"${chrom_num}".tsv"
 done
 fi
+
 
