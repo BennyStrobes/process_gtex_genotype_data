@@ -9,7 +9,7 @@
 #############################
 
 # GTEx vcf (downloaded directly from DB-GAP)
-input_vcf_file="/lab-share/CHIP-Strober-e2/Public/GTEx/genotype_dbgap_download/phg001796.v1.GTEx_v9_WGS_953.genotype-calls-vcf.c1/GTEx_Analysis_2021-02-11_v9_WholeGenomeSeq_953Indiv.vcf.gz"
+input_vcf_file="/lab-share/CHIP-Strober-e2/Public/GTEx/genotype_dbgap_download/phg001796.v1.GTEx_v9_WGS_phased.genotype-calls-vcf.c1/"
 
 # eQTL summary statistics
 gtex_v10_eqtl_sumstats_dir="/lab-share/CHIP-Strober-e2/Public/GTEx/eqtl_sumstats/"
