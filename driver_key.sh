@@ -26,8 +26,6 @@ tmp_genotype_dir="/lab-share/CHIP-Strober-e2/Public/ben/process_gtex_genotype_da
 
 
 
-
-
 #############################
 # Code
 #############################
